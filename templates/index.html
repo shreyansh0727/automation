@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Scheduler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            margin-bottom: 20px;
+            color: #777;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Email Scheduler</h1>
+        <p>Your email and password are safe with us. We do not store your credentials. Please ensure you have created an App Password for your Gmail account to use with this application.</p>
+        <p><strong>Instructions:</strong> Go to your Google Account's Security settings, enable 2-Step Verification if not already enabled, then search and generate an App Password for this application.</p>
+        <form method="POST">
+            <label for="time_to_send">Time to Send (HH:MM)</label>
+            <input type="text" id="time_to_send" name="time_to_send" required>
+
+            <label for="sender_email">Your Email</label>
+            <input type="email" id="sender_email" name="sender_email" required>
+
+            <label for="app_password">App Password</label>
+            <input type="password" id="app_password" name="app_password" required>
+
+            <label for="receiver_email">Receiver's Email</label>
+            <input type="email" id="receiver_email" name="receiver_email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="body">Body</label>
+            <textarea id="body" name="body" rows="5" required></textarea>
+
+            <button type="submit">Schedule Email</button>
+        </form>
+    </div>
+</body>
+</html>
